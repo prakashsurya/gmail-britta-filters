@@ -34,6 +34,7 @@ fs = GmailBritta.filterset(:me => ['me@prakashsurya.com']) do
             from:*@allstatesurvey.com
             from:*@marketplace.amazon.com
             from:a098513@allstate.com
+            from:admin@woodworkingmasterclasses.com
             from:andrewfinneyteam@gmail.com
             from:change@mail.change.org
             from:customer-reviews-messages@amazon.com
