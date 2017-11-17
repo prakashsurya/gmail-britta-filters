@@ -65,6 +65,7 @@ fs = GmailBritta.filterset(:me => ['prakash.surya@delphix.com']) do
         has [{:or => %w{
             to:git-notify-app@delphix.com
             to:git-notify-devops@delphix.com
+            to:git-notify-os@delphix.com
         }}]
         delete_it
     }
