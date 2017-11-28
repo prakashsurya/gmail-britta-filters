@@ -69,6 +69,7 @@ fs = GmailBritta.filterset(:me => ['me@prakashsurya.com']) do
             replyto:help@superbmaids.net
             replyto:homealert@realtor.com
             replyto:jimmyvega@allstate.com
+            replyto:lora@lorazombie.com
             replyto:media@eat24.com
             replyto:news@asana.com
             replyto:newsletter@haleystrategic.com
