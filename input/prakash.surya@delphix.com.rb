@@ -69,6 +69,14 @@ fs = GmailBritta.filterset(:me => ['prakash.surya@delphix.com']) do
         }}]
         delete_it
     }
+
+    filter {
+        has [{:and => %w{
+            from:*@delphix.com
+            subject:^Review Request
+        }}]
+        mark_read
+    }.archive_unless_directed
 end
 
 puts fs.generate
