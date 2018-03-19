@@ -62,21 +62,22 @@ fs = GmailBritta.filterset(:me => ['prakash.surya@delphix.com']) do
     }.archive_unless_directed
 
     filter {
-        has [{:or => %w{
-            to:git-notify-app@delphix.com
-            to:git-notify-devops@delphix.com
-            to:git-notify-os@delphix.com
-        }}]
-        delete_it
-    }
-
-    filter {
         has [{:and => %w{
             from:*@delphix.com
             subject:^Review Request
         }}]
         mark_read
     }.archive_unless_directed
+
+    filter {
+        has [{:or => %w{
+            to:git-notify-app@delphix.com
+            to:git-notify-devops@delphix.com
+            to:git-notify-os@delphix.com
+            from:jenkins@delphix.com
+        }}]
+        delete_it
+    }
 end
 
 puts fs.generate
